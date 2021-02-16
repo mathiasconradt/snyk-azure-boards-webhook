@@ -1,0 +1,39 @@
+{
+  "name": "snyk-azure-boards-webhook",
+  "version": "0.1.1",
+  "description": "Demo App for Snyk Outbound Webhook for Azure Boards",
+  "engines": {
+    "node": "14.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.5",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroku/node-js-getting-started.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heroku/node-js-getting-started/issues"
+  },
+  "homepage": "https://github.com/heroku/node-js-getting-started#readme",
+  "author": ""
+}

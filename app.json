@@ -1,0 +1,8 @@
+{
+  "name": "Snyk Outbound Webhook for Azure Boards",
+  "description": "Demo App for Snyk Outbound Webhook for Azure Boards",
+  "repository": "https://github.com/mathiasconradt/snyk-azure-boards-webhook",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
