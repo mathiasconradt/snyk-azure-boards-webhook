@@ -29,11 +29,8 @@ const app = express()
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
   .use(bodyParser.raw())
-  .get('/snyk', (req, res) => {
-    console.log('process.env.SNYK_WEBHOOKS_SECRET ' + process.env.SNYK_WEBHOOKS_SECRET);
-    console.log('process.env.PAPERTRAIL_API_TOKEN ' + process.env.PAPERTRAIL_API_TOKEN);  
+  .get('/snyk', (req, res) => {  
     console.log('process.env.AZURE_DEVOPS_USER ' + process.env.AZURE_DEVOPS_USER);
-    console.log('process.env.AZURE_DEVOPS_ACCESS_TOKEN ' + process.env.AZURE_DEVOPS_ACCESS_TOKEN);
     res.sendStatus(200);
   })
   .post('/snyk', (req, res) => {
