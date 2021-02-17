@@ -42,7 +42,7 @@ const app = express()
       if (verified && req.body.newIssues) {
         var newIssues = req.body.newIssues;
         newIssues.forEach(issue => {        
-          var it = ISSUE_TEMPLATE;
+          var it = JSON.parse(JSON.stringify(ISSUE_TEMPLATE));
           it[0].value = issue.issueData.title + " [" + issue.issueData.id + "]";
           it[1].value = issue.issueData.description;
           this.createIssuePostman(it);
@@ -77,6 +77,7 @@ module.exports.createIssuePostman = function(issue) {
     console.log(JSON.stringify(response.data));
   })
   .catch(function (error) {
+    console.log("*** Error ***");
     console.log(error);
   });
 }
