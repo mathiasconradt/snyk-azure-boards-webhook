@@ -29,7 +29,11 @@ const app = express()
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
   .use(bodyParser.raw())
-  .get('/snyk', (req, res) => {  
+  .get('/snyk', (req, res) => {
+
+    var x = {};
+    var y = _.clone(x);
+
     console.log('process.env.AZURE_DEVOPS_USER ' + process.env.AZURE_DEVOPS_USER);
     res.sendStatus(200);
   })
