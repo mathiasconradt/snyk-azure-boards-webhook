@@ -45,10 +45,7 @@ const app = express()
           var it = ISSUE_TEMPLATE;
           it[0].value = issue.issueData.title + " [" + issue.issueData.id + "]";
           it[1].value = issue.issueData.description;
-          console.log(it);
-
           this.createIssuePostman(it);
-
         });
       }
       res.sendStatus(200);
@@ -63,7 +60,8 @@ module.exports.verifySignature = function (request) {
   return signature === request.headers[ 'x-hub-signature' ];
 }
 
-module.exports.createIssuePostman = function(issue) {  
+module.exports.createIssuePostman = function(issue) {
+  console.log('createIssuePostman: ' + issue[0].value);
   var auth = 'Basic ' + Buffer.from(process.env.AZURE_DEVOPS_USER + ':' + process.env.AZURE_DEVOPS_ACCESS_TOKEN).toString('base64');
   var config = {
     method: 'post',
