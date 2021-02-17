@@ -43,7 +43,7 @@ const app = express()
       console.log('verified: ', verified);
 
       if (verified && req.body.newIssues) {
-        var newIssues = _req.body.newIssues;
+        var newIssues = req.body.newIssues;
         newIssues.forEach(issue => {        
           var it = ISSUE_TEMPLATE;
           it[0].value = issue.issueData.title + " [" + issue.issueData.id + "]";
