@@ -29,11 +29,7 @@ const app = express()
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
   .use(bodyParser.raw())
-  .get('/snyk', (req, res) => {
-
-    var x = {};
-    var y = _.clone(x);
-
+  .get('/snyk', (req, res) => {  
     console.log('process.env.AZURE_DEVOPS_USER ' + process.env.AZURE_DEVOPS_USER);
     res.sendStatus(200);
   })
@@ -81,7 +77,6 @@ module.exports.createIssuePostman = function(issue) {
     console.log(JSON.stringify(response.data));
   })
   .catch(function (error) {
-    console.log("*** Error ***");
     console.log(error);
   });
 }
